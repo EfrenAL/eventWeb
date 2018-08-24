@@ -139,7 +139,7 @@ export default new Vuex.Store({
       if (!state.idToken) {
         return
       }
-      globalAxios.get('/event/all')
+      axios.get('/event/all')
         .then(res => {
           console.log(res)
           const data = res.data
