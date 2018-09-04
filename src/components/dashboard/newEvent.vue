@@ -51,6 +51,38 @@
                   v-model="city">
         </div>
 
+        <div class="input">
+          <label for="pictureUrl">Picture Url</label>
+          <input
+                  type="text"
+                  id="text"
+                  v-model="pictureUrl">
+        </div>
+
+        <div class="input">
+          <label for="thumbnailUrl">Thumbnail Url</label>
+          <input
+                  type="text"
+                  id="text"
+                  v-model="thumbnailUrl">
+        </div>
+
+        <div class="input">
+          <label for="web Url">Web Url</label>
+          <input
+                  type="text"
+                  id="text"
+                  v-model="webUrl">
+        </div>
+
+        <div class="input">
+          <label for="code">Code</label>
+          <input
+                  type="text"
+                  id="text"
+                  v-model="code">
+        </div>
+
         <div class="submit">
           <button type="submit">Submit</button>
         </div>
@@ -69,7 +101,11 @@
         postcode: '',
         street: '',
         country: 'usa',
-        city: ''
+        city: '',
+        pictureUrl: '',
+        thumbnailUrl: '',
+        webUrl: '',
+        code: ''
       }
     },
     methods: {
@@ -82,7 +118,11 @@
           postcode: this.postcode,
           street: this.street,
           country: this.country,
-          city: this.city
+          city: this.city,
+          pictureUrl: this.pictureUrl,
+          thumbnailUrl: this.thumbnailUrl,
+          webUrl: this.webUrl,
+          code: this.code
         }
         console.log(formData)
         this.$store.dispatch('newEvent', formData)

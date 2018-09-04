@@ -73,7 +73,11 @@ export default new Vuex.Store({
         postcode: newEvent.postcode,
         street: newEvent.street,      
         city: newEvent.city,
-        country: newEvent.country
+        country: newEvent.country,
+        pictureUrl: newEvent.pictureUrl,
+        thumbnailUrl: newEvent.thumbnailUrl,
+        webUrl: newEvent.webUrl,
+        code: newEvent.code
       })
         .then(res => {
           console.log(res)
